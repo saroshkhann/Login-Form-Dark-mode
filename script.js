@@ -11,6 +11,8 @@ const round = document.querySelector('.round');
 const body = document.querySelector('body');
 const mode = document.querySelector('.mode');
 
+let working = false;
+
 const account = {
   email: 'ksarosh785@gmail.com',
   password: '123',
@@ -29,15 +31,19 @@ btnLogin.addEventListener('click', e => {
 });
 
 round.addEventListener('click', () => {
-  body.classList.add('toggle');
-  mode.textContent = 'Light mode';
-  mode.style.color = 'white';
+  if (!working) {
+    document.documentElement.style.setProperty('--primary-color', 'black');
+    mode.textContent = 'Light mode';
+    mode.style.color = 'White';
+    working = true;
+  }
 
-  round.addEventListener('click', function () {
-    if (body.classList.contains('toggle')) {
-      body.classList.remove('toggle');
+  round.addEventListener('click', () => {
+    if (working) {
+      document.documentElement.style.setProperty('--primary-color', '#86ab89');
       mode.textContent = 'Dark mode';
       mode.style.color = 'black';
+      working = true;
     }
   });
 });
