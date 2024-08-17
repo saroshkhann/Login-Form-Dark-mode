@@ -1,6 +1,8 @@
 :root {
   --primary-color: #86ab89;
   --white-color: #fff;
+  --linear-gradient-1: #86ab89a4;
+  --linear-gradient-2: #86ab89a9;
 }
 
 * {
@@ -170,7 +172,11 @@ input:checked + .slider:before {
 }
 
 .form__img {
-  background-image: linear-gradient(to right, #86ab89a4, #86ab89a9),
+  background-image: linear-gradient(
+      to right,
+      var(--linear-gradient-1),
+      var(--linear-gradient-2)
+    ),
     url(person-checking-their-phone-and-laptop-in-a-coffee-house.webp);
   background-size: cover;
   background-position: center;

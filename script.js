@@ -33,6 +33,14 @@ btnLogin.addEventListener('click', e => {
 round.addEventListener('click', () => {
   if (!working) {
     document.documentElement.style.setProperty('--primary-color', 'black');
+    document.documentElement.style.setProperty(
+      '--linear-gradient-1',
+      '#000000a6'
+    );
+    document.documentElement.style.setProperty(
+      '--linear-gradient-2',
+      '#00000096'
+    );
     mode.textContent = 'Light mode';
     mode.style.color = 'White';
     working = true;
@@ -41,6 +49,14 @@ round.addEventListener('click', () => {
   round.addEventListener('click', () => {
     if (working) {
       document.documentElement.style.setProperty('--primary-color', '#86ab89');
+      document.documentElement.style.setProperty(
+        '--linear-gradient-1',
+        '#86ab89a4'
+      );
+      document.documentElement.style.setProperty(
+        '--linear-gradient-2',
+        '#86ab89a9'
+      );
       mode.textContent = 'Dark mode';
       mode.style.color = 'black';
       working = true;
